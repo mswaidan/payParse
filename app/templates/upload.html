@@ -1,0 +1,19 @@
+<!-- extend from base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Upload File</h1>
+<form action="" method="post" name="upload" enctype="multipart/form-data">
+  {{ form.hidden_tag() }}
+  <p>
+  Selcet a file to upload:<br>
+  {{ form.csvFile }}<br>
+  {% for error in form.csvFile.errors %}
+  <span style="color: red;">[{{ error }}]</span>
+  {% endfor %}<br>
+  </p>
+  <p><input type="submit"
+            value="upload">
+  </p>
+</form>
+{% endblock %}

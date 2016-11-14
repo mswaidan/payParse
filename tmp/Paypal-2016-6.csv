@@ -1,0 +1,48 @@
+Date,Time, Time Zone,Name,Type,Status,Currency,Gross,Fee,Net
+6/30/2016,19:47:08,PDT,Bank Account,Withdraw Funds to Bank Account,Completed,USD,-187.67,0,-187.67
+6/29/2016,20:14:32,PDT,Albie Del Favero,Express Checkout Payment Received,Completed,USD,193.58,-5.91,187.67
+6/28/2016,19:47:08,PDT,Bank Account,Withdraw Funds to Bank Account,Completed,USD,-210.39,0,-210.39
+6/28/2016,11:20:56,PDT,Dennis Lynn,Express Checkout Payment Received,Completed,USD,216.98,-6.59,210.39
+6/23/2016,19:47:35,PDT,Bank Account,Withdraw Funds to Bank Account,Completed,USD,-31.74,0,-31.74
+6/23/2016,08:12:44,PDT,Kathleen Moriarty,Express Checkout Payment Received,Completed,USD,33,-1.26,31.74
+6/17/2016,19:47:07,PDT,Bank Account,Withdraw Funds to Bank Account,Completed,USD,-621.14,0,-621.14
+6/17/2016,14:28:06,PDT,Monte Rogneby,Express Checkout Payment Received,Completed,USD,640,-18.86,621.14
+6/15/2016,19:47:07,PDT,Bank Account,Withdraw Funds to Bank Account,Completed,USD,-349.26,0,-349.26
+6/15/2016,13:11:33,PDT,William Morico,Express Checkout Payment Received,Completed,USD,360,-10.74,349.26
+6/14/2016,12:51:03,PDT,Newegg.com,Express Checkout Payment Sent,Completed,USD,-12.49,0,-12.49
+6/14/2016,12:51:03,PDT,Bank Account,Add Funds from a Bank Account,Completed,USD,12.49,0,12.49
+6/13/2016,19:47:10,PDT,Bank Account,Withdraw Funds to Bank Account,Completed,USD,-193.9,0,-193.9
+6/13/2016,14:06:56,PDT,Maria Porges,Express Checkout Payment Received,Completed,USD,200,-6.1,193.9
+6/10/2016,19:47:08,PDT,Bank Account,Withdraw Funds to Bank Account,Completed,USD,-193.9,0,-193.9
+6/10/2016,10:40:24,PDT,Jill Claterbos-Clay,Express Checkout Payment Received,Completed,USD,200,-6.1,193.9
+6/9/2016,19:47:03,PDT,Bank Account,Withdraw Funds to Bank Account,Completed,USD,-310.42,0,-310.42
+6/9/2016,16:35:51,PDT,Michael Butler,Express Checkout Payment Received,Completed,USD,320,-9.58,310.42
+6/9/2016,08:15:37,PDT,U.S. Postal Service,Express Checkout Payment Sent,Completed,USD,-80.1,0,-80.1
+6/9/2016,08:15:37,PDT,Bank Account,Add Funds from a Bank Account,Completed,USD,39.36,0,39.36
+6/9/2016,08:15:37,PDT,PayPal,Temporary Hold,Removed,USD,40.74,0,40.74
+6/9/2016,08:15:34,PDT,PayPal,Temporary Hold,Placed,USD,-40.74,0,-40.74
+6/9/2016,06:38:44,PDT,PayPal,Temporary Hold,Removed,USD,40.74,0,40.74
+6/8/2016,15:10:37,PDT,Toolstoday.com LLC,Express Checkout Payment Sent,Completed,USD,-132.87,0,-132.87
+6/8/2016,15:10:37,PDT,Bank Account,Add Funds from a Bank Account,Completed,USD,132.87,0,132.87
+6/7/2016,19:47:33,PDT,Bank Account,Withdraw Funds to Bank Account,Completed,USD,-191.9,0,-191.9
+6/7/2016,04:53:40,PDT,Lisbeth Ron,Express Checkout Payment Received,Completed,USD,200,-8.1,191.9
+6/6/2016,14:53:50,PDT,PayPal,Temporary Hold,Placed,USD,-40.74,0,-40.74
+6/6/2016,14:53:50,PDT,From Euro,Currency Conversion,Completed,USD,40.74,0,40.74
+6/6/2016,14:53:50,PDT,To U.S. Dollar,Currency Conversion,Completed,EUR,-34.95,0,-34.95
+6/6/2016,14:53:50,PDT,i6 Media B.V.,Refund,Completed,EUR,34.95,0,34.95
+6/6/2016,10:43:47,PDT,Scommerce Mage Ltd,Express Checkout Payment Sent,Completed,GBP,-54.99,0,-54.99
+6/6/2016,10:43:47,PDT,From U.S. Dollar,Currency Conversion,Completed,GBP,54.99,0,54.99
+6/6/2016,10:43:47,PDT,To British Pound,Currency Conversion,Completed,USD,-81.56,0,-81.56
+6/6/2016,10:43:47,PDT,Bank Account,Add Funds from a Bank Account,Completed,USD,81.56,0,81.56
+6/6/2016,05:41:53,PDT,i6 Media B.V.,Express Checkout Payment Sent,Refunded,EUR,-34.95,0,-34.95
+6/6/2016,05:41:53,PDT,From U.S. Dollar,Currency Conversion,Completed,EUR,34.95,0,34.95
+6/6/2016,05:41:53,PDT,To Euro,Currency Conversion,Completed,USD,-40.74,0,-40.74
+6/6/2016,05:41:53,PDT,Bank Account,Add Funds from a Bank Account,Completed,USD,40.74,0,40.74
+6/5/2016,19:47:03,PDT,Bank Account,Withdraw Funds to Bank Account,Completed,USD,-349.26,0,-349.26
+6/5/2016,15:50:46,PDT,christopher tate,Mobile Express Checkout Payment Received,Completed,USD,360,-10.74,349.26
+6/2/2016,19:47:06,PDT,Bank Account,Withdraw Funds to Bank Account,Completed,USD,-23.72,0,-23.72
+6/2/2016,07:02:34,PDT,Gillian Hannah Berry Designs,Express Checkout Payment Received,Completed,USD,25,-1.28,23.72
+6/1/2016,10:42:11,PDT,Toolstoday.com LLC,Express Checkout Payment Sent,Completed,USD,-55.76,0,-55.76
+6/1/2016,10:42:11,PDT,Bank Account,Add Funds from a Bank Account,Completed,USD,55.76,0,55.76
+6/1/2016,05:58:54,PDT,"Etsy, Inc",Express Checkout Payment Sent,Completed,USD,-179.35,0,-179.35
+6/1/2016,05:58:54,PDT,Bank Account,Add Funds from a Bank Account,Completed,USD,179.35,0,179.35
