@@ -3,17 +3,32 @@
 
 {% block content %}
 <h1>Upload File</h1>
+{% for error in form.csvFile.errors %}
+<span style="color: red;">[{{ error }}]</span>
+{% endfor %}<br>
+
 <form action="" method="post" name="upload" enctype="multipart/form-data">
   {{ form.hidden_tag() }}
   <p>
   Selcet a file to upload:<br>
-  {{ form.csvFile }}<br>
-  {% for error in form.csvFile.errors %}
-  <span style="color: red;">[{{ error }}]</span>
-  {% endfor %}<br>
-  </p>
-  <p><input type="submit"
-            value="upload">
+  File: {{ form.csvFile }}<br>
+  Source: {{ form.source }} <br>
+  <input type="submit" value="upload">
   </p>
 </form>
+<hr>
+<a href='/download'>Download</a>
+<table>
+  <th>Date</th>
+  <th>Description</th>
+  <th>Amount</th>
+  {% for dict in data %}
+  <tr>
+    <td>{{ dict['Date'] }}</td>
+    <td>{{ dict['Description'] }}</td>
+    <td>{{ dict['Amount'] }}</td>
+  </tr>
+  {% endfor %}
+</table>
+
 {% endblock %}

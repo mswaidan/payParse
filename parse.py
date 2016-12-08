@@ -49,3 +49,15 @@ def ppParse(listname):
             }
             newList.append(newItem)
     return newList
+
+def eParse(listname):
+    newList = []
+    for item in listname:
+        newItem = {
+            'Amount' : '-' + item['Fees'],
+            'Description' : 'Etsy Payment Processing Fee for ' + item['Buyer'],
+            'Date' : item['Order Date']
+        }
+        newList.append(newItem)
+    return newList
+
