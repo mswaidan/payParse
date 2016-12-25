@@ -1,6 +1,5 @@
 from flask import render_template,flash,redirect,session,stream_with_context,send_file
 from app import app
-#from .forms import LoginForm, UploadForm, OptionsForm
 from .forms import LoginForm, UploadForm
 import os
 import logging
@@ -9,6 +8,16 @@ from werkzeug.datastructures import Headers
 from werkzeug.wrappers import Response
 import parse
 import writeCsv
+from etsy import Etsy
+from etsy.oauth import EtsyOAuthClient
+from etsy import EtsyEnvProduction
+
+etsy_env = EtsyEnvProduction()
+etsy_oauth_client = EtsyOAuthClient('consumer_token','consumer_secret')
+signin_url = etsy_oauth_client.get_signin_url()
+#etsy_oauth_client.set_oauth_verifier(verifier_received_from_signin_url)
+#etsy_api = Etsy(etsy_oauth_client=etsy_oauth_client, etsy_env=etsy_env)
+#etsy_api.getUser(user_id="__SELF__")
 
 @app.route('/')
 @app.route('/index')
@@ -44,7 +53,7 @@ def upload():
         session['filename'] = uploaded
         session['uploadPath'] = ('./tmp/' + uploaded)
         form.csvFile.data.save(session['uploadPath'])
-        if 'uploadPath' in session:
+    if 'uploadPath' in session:
             if source == 'paypal':
                 data=(parse.toList(session['uploadPath']))
                 data=parse.ppClean(data)
@@ -52,54 +61,15 @@ def upload():
             else:
                 data=(parse.toList(session['uploadPath']))
                 data=parse.eParse(data)
-            session['data']=data
+                session['data']=data
     return render_template('upload.html',
-                           title = 'File Upload',
-                           form=form,
-                           data=data,
-                           source=source
-                          )
-
-@app.route('/results', methods=['GET', 
-                                'POST'])
-def results():
-    form = UploadForm()
-    if form.source.data == 'paypal':
-        print('paypal selected')
-    elif form.source.data == 'etsy':
-        print('etsy selected')
-    else:
-        print("no selection")
-    if 'uploadPath' in session:
-        #if form.source == 'paypal':
-        data=(parse.toList(session['uploadPath']))
-        data=parse.ppClean(data)
-        data=parse.ppParse(data)
-        session['data']=data
-        return render_template('results.html',
-                                title = 'Results ',
-                                filename = session['filename'],
+                                title = 'File Upload',
                                 form=form,
-                                data=data
+                                data=data,
+                                source=source
                                 )
-        #elif form.source == 'etsy':
-            #data = 'This is an etsy file'
-            #return render_template('results.html',
-            #title = 'Results ',
-            #filename = session['filename'],
-            #form=form,
-            #data=data
-            #)
-
-    else:
-        return render_template('results.html',
-                               title = 'Results: ',
-                               filename = 'No file uploaded',
-                               form=form
-                              )
 
 @app.route('/download')
-
 def download():
     data = session['data']
     headers = Headers()
@@ -108,10 +78,14 @@ def download():
     return Response(
         stream_with_context(writeCsv.writeCsv(data)),
         mimetype='text/csv', headers=headers
-    )
+    ) 
 
-#return Response(writeCsv.writeCsv(data))
-#return  send_file(writeCsv.writeCsv(data),
-#attachment_filename='parsed.csv',
-#as_attachment=True)
+@app.route('/auth')
+def auth():
+    #if 'credentials' not in session:
+        message = 'this is the auth page'
+        #return redirect('oauth2callback')
+        return render_template('auth.html',
+                               title = 'Auth',
+                               message=message)
 
