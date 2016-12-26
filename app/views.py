@@ -8,16 +8,6 @@ from werkzeug.datastructures import Headers
 from werkzeug.wrappers import Response
 import parse
 import writeCsv
-from etsy import Etsy
-from etsy.oauth import EtsyOAuthClient
-from etsy import EtsyEnvProduction
-
-etsy_env = EtsyEnvProduction()
-etsy_oauth_client = EtsyOAuthClient('consumer_token','consumer_secret')
-signin_url = etsy_oauth_client.get_signin_url()
-#etsy_oauth_client.set_oauth_verifier(verifier_received_from_signin_url)
-#etsy_api = Etsy(etsy_oauth_client=etsy_oauth_client, etsy_env=etsy_env)
-#etsy_api.getUser(user_id="__SELF__")
 
 @app.route('/')
 @app.route('/index')
