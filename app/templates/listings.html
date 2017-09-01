@@ -1,0 +1,18 @@
+<!-- extend from base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Active Listings</h3>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Quantity</th>
+        </tr>
+            {% for listing in results %}
+                <tr>
+                    <td>{{ listing.title }}</td>
+                    <td>{{ listing.quantity }}</td>
+                </tr>
+            {% endfor%}
+    </ul>    
+{% endblock %}

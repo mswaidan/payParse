@@ -1,0 +1,11 @@
+<!-- extend from base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Scopes Authorized:</h2>    
+        <ul>
+            {% for scope in data %}
+                <li>{{scope}}
+            {% endfor %}
+        </ul>
+{% endblock %}

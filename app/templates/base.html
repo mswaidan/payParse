@@ -1,24 +1,24 @@
 <html>
-  <head>
-    {% if title %}
-    <title>{{ title }} - payParse</title>
-    {% else %}
-    <title>Welcome to payParse</title>
-    {% endif %}
-  </head>
-  <body>
-    <div><a href="/index">home</a> <a href='/upload'>upload</a> <a
-            href='/auth'>auth</a></div>
-    <hr>
-    {% with messages = get_flashed_messages() %}
-    {% if messages %}
-    <ul>
-      {% for message in messages %}
-      <li>{{ message }} </li>
-      {% endfor %}
-    </ul>
-    {% endif %}
-    {% endwith %}
-    {% block content %}{% endblock %}
-  </body>
+    <head>
+        {% if title %}
+        <title>{{ title }} - swGui</title>
+        {% else %}
+        <title>swGui</title>
+        {% endif %}
+    </head>
+    <body>
+        <div id="nav">
+            <h1>swGui</h1>
+            <div id="toplinks">
+                <a href="/index">home</a>
+                <a href='/upload'>upload</a> 
+                <a href='/auth/etsy'>Etsy auth</a>
+                <a href='/auth/magento'>Magento auth</a>
+                <a href='/listings'>listings</a>
+                <a href='/scopes'>scopes</a>
+            </div>
+        </div>
+        {% block content %}
+        {% endblock %}
+    </body>
 </html>
